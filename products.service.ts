@@ -27,9 +27,6 @@ export const addProduct = (product: Product) => {
 
 export const updateProduct = (id: string, product: Product) => {
     const index = products.findIndex(x => x.id === id)
-    if(!product.id){
-        product.id = id
-    }
     products[index].name = product.name ? product.name : products[index].name
     products[index].category = product.category ? product.category : products[index].category
 }
